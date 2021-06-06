@@ -1,13 +1,10 @@
 const express = require('express')
+const { proyectosHome } = require('../controllers/proyectosController')
 const router = express.Router()
 
 module.exports = function(){
-    router.get('/', (req,res)=> {
-        res.send('Hello world')
-    })
-    router.get('/hola',(req,res)=>{
-        res.send('hola')
-    })
+    router.get('/', proyectosHome)
+    
 
     return router
 }
